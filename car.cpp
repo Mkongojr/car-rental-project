@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int reg[5] = {100, 101, 102, 103, 104};
+int reg[5] = {123, 234, 345, 456, 567};
 string comp[5] = {"suzuki", "crown", "toyota", "canter", "subaru"};
 int rent[5] = {2000, 2500, 3000, 3500, 4000};
 char avail[5] = {'y', 'y', 'y', 'y', 'y'};
@@ -9,7 +9,7 @@ int size = sizeof(reg) / sizeof(reg[0]);
 
 void showFun()
 {
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i <size;i++)
     {
         if (avail[i] == 'y')
         {
@@ -18,10 +18,8 @@ void showFun()
     }
 }
 
-int main()
-{
-    while (true)
-    {
+int main() {
+    while (true) {
         cout << "car rental management" << endl;
         cout << "............." << endl;
         cout << "1.Show available cars" << endl;
@@ -29,15 +27,15 @@ int main()
         cout << "3.Return a car." << endl;
         cout << "4.Exit." << endl;
         int choice;
-        cout << "enter your choice" << endl;
+        cout << "enter your choice: ";
         cin >> choice;
         if (choice == 1)
         {
             // available cars
             system("cls");
-            showFun()
-                    cout
-                << " " << endl;
+            showFun();
+            cout
+        << " " << endl;
         }
         else if (choice == 2)
         {
@@ -59,10 +57,10 @@ int main()
             cout << " " << endl;
             break;
         }
-    }
-    else
-    {
-        system("cls");
-        cout << "invalid input" << endl;
+        else
+        {
+            system("cls");
+            cout << "invalid input" << endl;
+        }
     }
 }

@@ -6,8 +6,10 @@ string comp[5] = {"suzuki", "crown", "toyota", "canter", "subaru"};
 int rent[5] = {2000, 2500, 3000, 3500, 4000};
 char available[5] = {'y', 'y', 'y', 'y', 'y'};
 
-int main(){
-    while(true){
+int main()
+{
+    while (true)
+    {
         cout << "car rental management" << endl;
         cout << "............." << endl;
         cout << "1.Show available cars" << endl;
@@ -17,5 +19,26 @@ int main(){
         int choice;
         cout << "enter your choice" << endl;
         cin >> choice;
-         }
+        if (choice == 1)
+        {
+            // available cars
+        }
+        else if (choice == 2)
+        {
+            // reserve a car
+        }
+        else if (choice == 3)
+        {
+            // return a car
+        }
+        else if (choice == 4)
+        {
+            system("cls");
+            cout << "best of luck!" << endl;
+            break;
+        }
+    }
+    else
+    {
+    }
 }

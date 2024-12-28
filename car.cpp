@@ -25,10 +25,16 @@ void reserveFun()
     cin >> reg;
     cout << "enter total days: ";
     cin >> days;
-
+    bool found = false;
     for (int i = 0; i < size; i++)
     {
-        if ()
+        if (regNo == reg[i] && avail[i] == 'y')
+        {
+            found = true;
+            avail[i] = 'n';
+            int bill = rent[i] * days;
+            cout << "your rent for " << comp[i] << "with reg" << reg[i] << "is: " << bill << endl;
+        }
     }
 }
 int main()

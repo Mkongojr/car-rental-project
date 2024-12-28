@@ -9,17 +9,32 @@ int size = sizeof(reg) / sizeof(reg[0]);
 
 void showFun()
 {
-    for (int i = 0; i <size;i++)
+    for (int i = 0; i < size; i++)
     {
         if (avail[i] == 'y')
         {
-            cout << "Car" << comp[i] << "with reg" << reg[i] << "and with rent" << rent[i] << endl;
+            cout << "Car " << comp[i] << " with reg " << reg[i] << " and with rent " << rent[i] << endl;
         }
     }
 }
 
-int main() {
-    while (true) {
+void reserveFun()
+{
+    int reg, days;
+    cout << "enter registration number: ";
+    cin >> reg;
+    cout << "enter total days: ";
+    cin >> days;
+
+    for (int i = 0; i < size; i++)
+    {
+        if ()
+    }
+}
+int main()
+{
+    while (true)
+    {
         cout << "car rental management" << endl;
         cout << "............." << endl;
         cout << "1.Show available cars" << endl;
@@ -35,7 +50,7 @@ int main() {
             system("cls");
             showFun();
             cout
-        << " " << endl;
+                << " " << endl;
         }
         else if (choice == 2)
         {

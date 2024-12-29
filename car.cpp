@@ -9,109 +9,85 @@ int size = sizeof(reg) / sizeof(reg[0]);
 
 void showFun()
 {
-    bool availableCars = false;
     for (int i = 0; i < size; i++)
     {
         if (avail[i] == 'y')
         {
             cout << "Car " << comp[i] << " with reg " << reg[i] << " and with rent " << rent[i] << endl;
-            availableCars = true;
         }
-    }
-    if (!availableCars)
-    {
-        cout << "No cars are currently available for rent." << endl;
     }
 }
 
 void reserveFun()
 {
-    int carReg, days;
-    cout << "Enter registration number: ";
-    cin >> carReg;
-    cout << "Enter total days: ";
+    int reg, days;
+    cout << "enter registration number: ";
+    cin >> reg;
+    cout << "enter total days: ";
     cin >> days;
-
     bool found = false;
     for (int i = 0; i < size; i++)
     {
-        if (reg[i] == carReg && avail[i] == 'y')
+        if (regNo == reg[i] && avail[i] == 'y')
         {
             found = true;
-            avail[i] = 'n'; // Mark as reserved
+            avail[i] = 'n';
             int bill = rent[i] * days;
-            cout << "Your rent for " << comp[i] << " with reg " << reg[i] << " is: " << bill << endl;
-            break;
+            cout << "your rent for " << comp[i] << "with reg" << reg[i] << "is: " << bill << endl;
         }
     }
     if (!found)
     {
-        cout << "This car is either not available or already reserved." << endl;
+        cout << "this car is absent" << endl;
     }
 }
-
-void returnCar()
-{
-    int carReg;
-    cout << "Enter the registration number of the car you want to return: ";
-    cin >> carReg;
-
-    bool found = false;
-    for (int i = 0; i < size; i++)
-    {
-        if (reg[i] == carReg && avail[i] == 'n')
-        {
-            avail[i] = 'y'; // Mark as available
-            cout << "Car " << comp[i] << " with reg " << reg[i] << " has been successfully returned!" << endl;
-            found = true;
-            break;
-        }
-    }
-    if (!found)
-    {
-        cout << "Car not found or not reserved." << endl;
-    }
-}
-
 int main()
 {
     while (true)
     {
-        cout << "\nCar Rental Management" << endl;
-        cout << "----------------------" << endl;
-        cout << "1. Show available cars" << endl;
-        cout << "2. Reserve a car" << endl;
-        cout << "3. Return a car" << endl;
-        cout << "4. Exit" << endl;
-
+        cout << "car rental management" << endl;
+        cout << "............." << endl;
+        cout << "1.Show available cars" << endl;
+        cout << "2.reserve a car." << endl;
+        cout << "3.Return a car." << endl;
+        cout << "4.Exit." << endl;
         int choice;
-        cout << "Enter your choice: ";
+        cout << "enter your choice: ";
         cin >> choice;
-
         if (choice == 1)
         {
-            // Show available cars
+            // available cars
+            system("cls");
             showFun();
+            cout
+                << " " << endl;
         }
         else if (choice == 2)
         {
-            // Reserve a car
+            // reserve a car
+            system("cls");
             reserveFun();
+            cout << " " << endl;
         }
         else if (choice == 3)
         {
-            // Return a car
-            returnCar();
+            // return a car
+            system("cls");
+
+            cout << " " << endl;
         }
         else if (choice == 4)
         {
-            cout << "Best of luck!" << endl;
-            break; // Exit the program
+            system("cls");
+            cout << "best of luck!" << endl;
+            cout << " " << endl;
+            break;
         }
         else
         {
-            cout << "Invalid input. Please try again." << endl;
+            system("cls");
+            cout << "invalid input" << endl;
         }
     }
-    return 0; // Ensure the return statement is there to indicate successful execution
+    "check and correct the errors"
 }
